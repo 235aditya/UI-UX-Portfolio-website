@@ -4,7 +4,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function CaseStudy({ caseId }) {
+export default function CaseStudy({ caseId }:{ caseId: string }) {
+  const [activeSection, setActiveSection] = useState('overview');
+
+  const caseStudyData = {
+    title: "DevStudio - Professional Development Studio Website",
+    subtitle: "Modern web development services showcase with contemporary design",
+    overview: "DevStudio represents a comprehensive solution for a professional development studio seeking to showcase their expertise and attract high-quality clients. The project focused on creating a modern, trustworthy, and technically sophisticated web presence.",
   const [activeSection, setActiveSection] = useState('overview');
 
   const caseStudyData = {
